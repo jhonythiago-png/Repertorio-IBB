@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repertório IBB | Netflix Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">REPERTÓRIO IBB</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Página Inicial</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Novos</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Títulos, artistas...">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1 id="heroTitle">Aclame ao Senhor</h1>
+                <p id="heroInfo">Diante do Trono • Consagração</p>
+                <div class="buttons">
+                    <button class="play-btn" onclick="openHeroVideo()"><i class="fas fa-play"></i> Assistir</button>
+                    <button class="info-btn"><i class="fas fa-info-circle"></i> Mais Informações</button>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <div id="categoriesContainer">
+            <!-- As categorias serão injetadas aqui via JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IBB Louvor - Desenvolvido por <span class="developer-name">Jhony Berado</span></p>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-wrapper">
+                <iframe id="videoIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalArtist"></p>
+                <div class="modal-actions">
+                    <button id="editUrlBtn" title="Editar URL do vídeo"><i class="fas fa-edit"></i> Editar Versão</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
