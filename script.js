@@ -642,7 +642,7 @@ function resetView() {
 function updateFooter() {
     const footer = document.querySelector('footer');
     if (footer) {
-        footer.innerHTML = `<p class="footer-dev">IBB Louvor Desenvolvido por Jhony Beraldo</p>`;
+        footer.innerHTML = `<p class="footer-dev">IBB Louvor - Desenvolvido por Jhony Beraldo</p>`;
     }
 }
 
